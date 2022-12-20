@@ -1,0 +1,109 @@
+// 各独立模块的相同配置项
+// 在个模块中引用配置
+apply {
+    if (isRelease) {
+        plugins.apply('com.android.library')
+    } else {
+        plugins.apply('com.android.application')
+    }
+    apply plugin: 'dagger.hilt.android.plugin'
+    apply plugin: 'maven-publish'
+
+}
+android {
+    compileSdkVersion build_versions.compileSdk
+    buildToolsVersion build_versions.buildTools
+    defaultConfig {
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        minSdkVersion build_versions.minSdk
+        targetSdkVersion build_versions.targetSdk
+    }
+    sourceSets {
+        main {
+            if (isRelease) {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            /**
+             * 设置debug带正式签名
+             */
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+        warning 'InvalidPackage'
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.android_junit
+    androidTestImplementation deps.test.test
+    androidTestImplementation deps.test.espresso
+
+    api deps.material
+    api deps.appcompat
+    api deps.swiperefreshlayout
+    api deps.recyclerview
+    api deps.constraintlayout
+
+    api deps.flowlayout
+
+    api deps.logger
+    api deps.qmui
+    //leakCanary
+//    debugImplementation deps.leakcanary.debug
+
+    api deps.jenly.base_util
+    api deps.jenly.base_adapter
+
+    //lifecycle
+    annotationProcessor deps.lifecycle.compiler
+    //room - Room Orm
+    annotationProcessor deps.room.compiler
+    //room.rxjava - Room配合RxJava线程调度使用
+    api deps.room.rxjava2
+
+    api deps.dagger.hilt_android
+    annotationProcessor deps.dagger.hilt_compiler
+
+    api 'com.github.jenly1314:mvvmframe:2.2.1'
+    api 'com.youth.banner:banner:2.1.0'
+    api 'com.alibaba:fastjson:2.0.19.android'
+    api 'com.github.bumptech.glide:glide:4.11.0'//Glide+高斯模糊
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'//Glide+高斯模糊
+    api 'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    api 'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
+    api 'io.github.scwang90:refresh-header-material:2.0.5'    //谷歌刷新头
+    api 'com.androidkun:XTabLayout:1.1.5'
+    api 'com.github.JuHonggang:ShadowDrawable:0.1'//阴影
+    //微信
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //支付宝
+    api 'com.alipay.sdk:alipaysdk-android:+@aar'
+    api 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer:v8.3.4-release-jitpack'
+    api 'com.king.zxing:zxing-lite:1.1.9-androidx'//二维码
+
+}

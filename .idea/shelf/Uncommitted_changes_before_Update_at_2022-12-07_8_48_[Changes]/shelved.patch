@@ -1,0 +1,85 @@
+Index: app_classroom/src/main/java/com/zkwl/app_classroom/config/ImageAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app_classroom/src/main/java/com/zkwl/app_classroom/config/ImageAdapter.java b/app_classroom/src/main/java/com/zkwl/app_classroom/adapter/ImageAdapter.java
+rename from app_classroom/src/main/java/com/zkwl/app_classroom/config/ImageAdapter.java
+rename to app_classroom/src/main/java/com/zkwl/app_classroom/adapter/ImageAdapter.java
+--- a/app_classroom/src/main/java/com/zkwl/app_classroom/config/ImageAdapter.java	
++++ b/app_classroom/src/main/java/com/zkwl/app_classroom/adapter/ImageAdapter.java	
+@@ -1,4 +1,4 @@
+-package com.zkwl.app_classroom.config;
++package com.zkwl.app_classroom.adapter;
+ 
+ import android.graphics.drawable.Drawable;
+ import android.view.ViewGroup;
+Index: app_classroom/src/main/java/com/zkwl/app_classroom/config/AppConfigModule.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app_classroom/src/main/java/com/zkwl/app_classroom/config/AppConfigModule.java b/app_classroom/src/main/java/com/zkwl/app_classroom/config/ClassroomAppConfigModule.java
+rename from app_classroom/src/main/java/com/zkwl/app_classroom/config/AppConfigModule.java
+rename to app_classroom/src/main/java/com/zkwl/app_classroom/config/ClassroomAppConfigModule.java
+--- a/app_classroom/src/main/java/com/zkwl/app_classroom/config/AppConfigModule.java	
++++ b/app_classroom/src/main/java/com/zkwl/app_classroom/config/ClassroomAppConfigModule.java	
+@@ -10,7 +10,8 @@
+ import com.king.frame.mvvmframe.config.FrameConfigModule;
+ import com.king.frame.mvvmframe.di.module.ConfigModule;
+ import com.king.retrofit.retrofithelper.RetrofitHelper;
+-import com.zkwl.app_classroom.api.Constants;
++import com.zkwl.app_classroom.BuildConfig;
++import com.zkwl.app_classroom.api.ClassroomConstants;
+ import com.zkwl.app_classroom.util.SpsUtil;
+ 
+ import org.jetbrains.annotations.NotNull;
+@@ -32,7 +33,7 @@
+  *
+  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
+  */
+-public class AppConfigModule extends FrameConfigModule {
++public class ClassroomAppConfigModule extends FrameConfigModule {
+     @Override
+     public void applyOptions(Context context, ConfigModule.Builder builder) {
+         /**
+@@ -61,7 +62,7 @@
+          * >
+          */
+         //通过第一种方式初始化BaseUrl
+-        builder.baseUrl(Constants.BASE_URL);//TODO 配置Retrofit中的baseUrl
++        builder.baseUrl(ClassroomConstants.BASE_URL);//TODO 配置Retrofit中的baseUrl
+         builder.retrofitOptions(new RetrofitOptions() {
+                     @Override
+                     public void applyOptions(Retrofit.Builder builder) {
+@@ -116,7 +117,10 @@
+                                 }
+ 
+                                 String access_token = SpsUtil.getString(context, "access_token", "");
+-
++                                if (BuildConfig.DEBUG){
++                                    //单独运行模块时的临时token
++                                    access_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE2NjkxMDU0MTAsImV4cCI6MTY3MTY5NzQxMCwibmJmIjoxMzU3MDAwMDAwLCJqdGkiOiI0OTg2RUFBRDIwRUI4NjU2MkYxM0VFNUZENDQyRUM1QyIsImlkIjoxNDgyLCJuaWNrbmFtZSI6Ilx1NTQ2OFx1OTFkMVx1NjY1MyJ9.Lb-ll10JzBjOWAVinVB3IepsqjU4o-7cssmdsa_uJCw";
++                                }
+                                 requestBuilder.addHeader("Authorization", ""+access_token);
+                                 Log.d("DEBUG", "-------------------");
+                                 return chain.proceed(requestBuilder.build());
+Index: app_classroom/src/main/java/com/zkwl/app_classroom/api/Constants.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app_classroom/src/main/java/com/zkwl/app_classroom/api/Constants.java b/app_classroom/src/main/java/com/zkwl/app_classroom/api/ClassroomConstants.java
+rename from app_classroom/src/main/java/com/zkwl/app_classroom/api/Constants.java
+rename to app_classroom/src/main/java/com/zkwl/app_classroom/api/ClassroomConstants.java
+--- a/app_classroom/src/main/java/com/zkwl/app_classroom/api/Constants.java	
++++ b/app_classroom/src/main/java/com/zkwl/app_classroom/api/ClassroomConstants.java	
+@@ -3,7 +3,7 @@
+ /**
+  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
+  */
+-public final class Constants {
++public final class ClassroomConstants {
+ 
+ 
+     public static final String BASE_URL = "http://devland.sdzkworld.com/api/proprietor/";

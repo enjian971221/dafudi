@@ -1,0 +1,65 @@
+Index: app_healthy/src/androidTest/java/com/zkwl/app_classroom/ExampleInstrumentedTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app_healthy/src/androidTest/java/com/zkwl/app_classroom/ExampleInstrumentedTest.java b/app_healthy/src/androidTest/java/com/zkwl/app_classroom/ExampleInstrumentedTest.java
+new file mode 100644
+--- /dev/null	(date 1670911573929)
++++ b/app_healthy/src/androidTest/java/com/zkwl/app_classroom/ExampleInstrumentedTest.java	(date 1670911573929)
+@@ -0,0 +1,26 @@
++package com.zkwl.app_classroom;
++
++import static org.junit.Assert.assertEquals;
++
++import android.content.Context;
++
++import androidx.test.ext.junit.runners.AndroidJUnit4;
++import androidx.test.platform.app.InstrumentationRegistry;
++
++import org.junit.Test;
++import org.junit.runner.RunWith;
++
++/**
++ * Instrumented test, which will execute on an Android device.
++ *
++ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
++ */
++@RunWith(AndroidJUnit4.class)
++public class ExampleInstrumentedTest {
++    @Test
++    public void useAppContext() {
++        // Context of the app under test.
++        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
++        assertEquals("com.zkwl.app_chongdianzhuang", appContext.getPackageName());
++    }
++}
+\ No newline at end of file
+Index: app_healthy/src/test/java/com/zkwl/app_classroom/ExampleUnitTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app_healthy/src/test/java/com/zkwl/app_classroom/ExampleUnitTest.java b/app_healthy/src/test/java/com/zkwl/app_classroom/ExampleUnitTest.java
+new file mode 100644
+--- /dev/null	(date 1669689654574)
++++ b/app_healthy/src/test/java/com/zkwl/app_classroom/ExampleUnitTest.java	(date 1669689654574)
+@@ -0,0 +1,17 @@
++package com.zkwl.app_classroom;
++
++import org.junit.Test;
++
++import static org.junit.Assert.*;
++
++/**
++ * Example local unit test, which will execute on the development machine (host).
++ *
++ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
++ */
++public class ExampleUnitTest {
++    @Test
++    public void addition_isCorrect() {
++        assertEquals(4, 2 + 2);
++    }
++}
+\ No newline at end of file
