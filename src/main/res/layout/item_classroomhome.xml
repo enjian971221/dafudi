@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/rootview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_white10"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/goodimg"
+            android:layout_width="100dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/title"
+                android:textColor="#ff333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/people_number"
+                android:textColor="#ffa4a4a4"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥0"
+                    android:id="@+id/price"
+                    android:textColor="#ffeb2c2c"
+                    android:textSize="14sp"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_green10"
+                    android:layout_width="65dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:id="@+id/buy"
+                    android:text="立即学习"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

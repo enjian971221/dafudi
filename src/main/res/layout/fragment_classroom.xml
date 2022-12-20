@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_classroom_homeheader" />
+
+                    <View
+                        android:id="@+id/stu"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@color/transparent"
+                        app:status="@{null}" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="41dp"
+                        android:layout_below="@id/stu"
+                        android:id="@+id/tv_search"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/shape_white16"
+                        android:drawableLeft="@mipmap/icon_classroomsearch"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="搜索想要的课程"
+                        android:paddingLeft="40dp"
+                        android:textColor="#ffd7d7d7"
+                        android:textColorHint="#D7D7D7"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="-100dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/shape_white10"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/category_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"
+                        app:spanCount="4"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+
+                </LinearLayout>
+
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="16dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@mipmap/icon_classroom_homeic1"
+                    android:drawablePadding="10dp"
+                    android:text="课程推荐"
+                    android:textColor="#ff333333"
+                    android:textSize="18sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</layout>
