@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F7F7"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/stu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#FF962F"
+            app:status="@{null}" />
+
+        <com.qmuiteam.qmui.widget.QMUITopBar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FF962F"
+            app:qmui_bottomDividerHeight="0dp"
+            app:qmui_topbar_title_color="@color/white" />
+
+        <com.androidkun.xtablayout.XTabLayout
+            android:id="@+id/xTablayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            app:xTabDividerColor="#000"
+            app:xTabIndicatorColor="#333333"
+            app:xTabIndicatorWidth="70dp"
+            app:xTabMode="fixed"
+            app:xTabSelectedTextColor="#333333"
+            app:xTabSelectedTextSize="18sp"
+            app:xTabTextColor="#666666"
+            app:xTabTextSize="18sp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</layout>

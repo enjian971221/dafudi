@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_store_good_type_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_dimen_35"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/store_good_type_item_line"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_bt" />
+
+    <TextView
+        android:id="@+id/store_good_type_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="name"
+        android:textColor="@drawable/tv_store_select"
+        android:textSize="@dimen/common_size_14" />
+</LinearLayout>

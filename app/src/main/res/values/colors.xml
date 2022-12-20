@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="text_3">#333333</color>
+    <color name="text_6">#666666</color>
+    <color name="text_9">#999999</color>
+    <color name="line_gray">#CCCCCC</color>
+
+    <color name="text_oil_price">#008577</color>
+
+    <color name="line_h">#f3f3f3</color>
+
+    <color name="tag_bg_normal">#eeeeee</color>
+    <color name="tag_bg_pressed">#d2d2d2</color>
+    <color name="basebg">#E49725</color>
+    <color name="white">#ffffff</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="pass_view_rect_input">#3DA3FF</color>
+    <color name="regi_line_color">#c8c8c8</color>
+    <color name="touming">#00000000</color>
+
+    <!--底部导航栏-->
+    <color name="bbl_999999">#999999</color>
+    <color name="color_999">#999999</color>
+    <color name="bbl_ff0000">#ff0000</color>
+    <color name="selector_grey">#DDDDDD</color>
+
+    <!--BottomLayout-->
+    <!--底部导航栏-->
+    <color name="bbl_selector_grey">#DDDDDD</color>
+    <color name="bbl_tab_gb">#F3F5F4</color>
+</resources>

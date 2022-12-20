@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/shape_green10">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="温馨提示"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sercurity_tv_msgnotice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_dimen_10"
+                android:lineSpacingExtra="5dp"
+                android:text="全荷智万家欢迎您,本应用尊重并保护所有使用服务用户的个人隐私权,为了给您提供更准确,更有个性化的服务,本应用会按照本隐私权政策的规定使用和披露您的个人信息,在未征得您事先许可的情况下,本应用不会将这些信息对外披露或向第三方提供,关于您的个人信息相关问题请详见《全荷智万家隐私政策》请您认真阅读并充分理解,如您同意并继续使用本软件,请点击同意,我们严格遵守法律法规，遵循以下隐私保护原则，为您提供更加安全、可靠的服务"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_size_14" />
+            <TextView
+                android:id="@+id/sercurity_tv_positive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_dimen_10"
+                android:layout_marginRight="@dimen/common_dimen_10"
+                android:layout_marginTop="@dimen/common_dimen_20"
+                android:gravity="center"
+                android:padding="@dimen/common_dimen_10"
+                android:text="同意"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                />
+            <TextView
+                android:id="@+id/sercurity_tv_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_dimen_10"
+                android:layout_marginRight="@dimen/common_dimen_10"
+                android:layout_marginTop="@dimen/common_dimen_20"
+                android:gravity="center"
+                android:padding="@dimen/common_dimen_10"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:background="@color/basebg"
+                />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

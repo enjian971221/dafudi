@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SurfaceView
+                android:id="@+id/surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.king.zxing.ViewfinderView
+                android:id="@+id/viewfinderView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/ivTorch"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="150dp"
+                android:src="@drawable/zxl_torch_selector" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/stusbar"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:background="#00000000"
+                app:status="@{null}" />
+
+            <RelativeLayout
+                android:id="@+id/base_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/base_back_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@mipmap/icon_back_white"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+                <TextView
+                    android:id="@+id/base_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="核销券码"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/base_right_tv"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:paddingRight="15dp"-->
+<!--                    android:src="@mipmap/icon_selectimg" />-->
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

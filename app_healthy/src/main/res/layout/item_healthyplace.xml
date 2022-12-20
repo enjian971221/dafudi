@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/rootview"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape_white25"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/name"
+                android:maxLines="2"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:id="@+id/area"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:id="@+id/selectimg"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/icon_healthy_placeunselect"
+            />
+    </LinearLayout>
+
+</layout>

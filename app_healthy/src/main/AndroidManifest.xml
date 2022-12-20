@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zkwl.app_healthy">
+
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取应用列表 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!--    // 在应用的AndroidManifest.xml添加如下<queries>标签-->
+    <queries>
+        <package android:name="com.tencent.mm" />
+    </queries>
+
+    <application>
+        <activity android:name="com.zkwl.app_healthy.HealthyMainActivity"></activity>
+        <activity
+            android:name=".ui.SearchMoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SearchGoodsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.GoodsDetailsActivity" />
+        <activity android:name=".ui.BuyDetailsActivity" />
+        <activity android:name=".ui.OrderListActivity" />
+        <activity android:name=".ui.OrderDetailsActivity" />
+        <activity android:name=".ui.WebActivity" />
+
+        <meta-data
+            android:name="com.zkwl.app_healthy.config.HealthyAppConfigModule"
+            android:value="FrameConfigModule" />
+
+    </application>
+
+</manifest>

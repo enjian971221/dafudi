@@ -1,0 +1,246 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="QMUI.Compat.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="onClick">
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">onClick</item>
+    </style>
+    <!--密码输入layout-->
+    <!--密码输入layout-->
+    <declare-styleable name="PassWordLayoutStyle">
+        <attr name="box_input_color" format="reference"></attr>//输入框输入状态颜色
+        <attr name="box_no_input_color" format="reference"></attr>//输入框未输入状态颜色
+        <attr name="input_line_color" format="reference"></attr>//输入线颜色
+        <attr name="text_input_color" format="reference"></attr>//文本颜色
+        <attr name="interval_width" format="dimension"></attr>//间隔
+        <attr name="item_width" format="dimension"></attr>//子View宽
+        <attr name="item_height" format="dimension"></attr>//子View高
+        <attr name="draw_txt_size" format="dimension"></attr>//文本大小
+        <attr name="draw_box_line_size" format="dimension"></attr>//输入线条大小
+        <attr name="is_show_input_line" format="boolean"></attr>//是否显示输入线
+        <attr name="pass_inputed_type">//密码输入显示内容
+            <flag name="circle" value="0" />
+            <flag name="stars" value="1" />
+            <flag name="text" value="2" />
+        </attr>
+        <attr name="box_draw_type">//密码框形状
+            <flag name="rect" value="0" />
+            <flag name="circle" value="1" />
+            <flag name="line" value="2" />
+        </attr>
+        <attr name="pass_leng">//密码长度 只考虑4 6 8
+            <flag name="four" value="4" />
+            <flag name="six" value="6" />
+            <flag name="eight" value="8" />
+        </attr>
+    </declare-styleable>
+    <style name="dialog_center" parent="Theme.AppCompat.Dialog.Alert">
+        <!-- 去黑边 -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:screenOrientation">portrait</item>
+        <!-- 设置是否可滑动 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 背景 -->
+        <!-- 窗口背景 @color/touming的值为：#00000000 ， style中不能直接引用16进制，感谢评论区的老铁提醒-->
+
+        <item name="android:windowBackground">@color/touming</item>
+
+        <!-- 是否变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 点击空白部分activity不消失 -->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <declare-styleable name="BottomBarItem">
+        <!--默认状态下的图标-->
+        <attr name="iconNormal" format="reference" />
+        <!--选中状态下的图标-->
+        <attr name="iconSelected" format="reference" />
+        <!--底部文字-->
+        <attr name="itemText" format="string" />
+        <!--文字大小-->
+        <attr name="itemTextSize" format="dimension" />
+        <!--默认状态下的文字颜色-->
+        <attr name="textColorNormal" format="color" />
+        <!--选中状态下的文字颜色-->
+        <attr name="textColorSelected" format="color" />
+        <!--文字和图标的顶部距离-->
+        <attr name="itemMarginTop" format="dimension" />
+        <!--是否开启触摸背景效果-->
+        <attr name="openTouchBg" format="boolean" />
+        <!--设置触摸背景-->
+        <attr name="touchDrawable" format="reference" />
+        <!--设置图标的宽度-->
+        <attr name="iconWidth" format="dimension" />
+        <!--设置图标的高度-->
+        <attr name="iconHeight" format="dimension" />
+        <!--设置BottomBarItem的padding-->
+        <attr name="itemPadding" format="dimension" />
+        <!--设置未读数字体大小-->
+        <attr name="unreadTextSize" format="dimension" />
+        <!--设置未读数字体颜色-->
+        <attr name="unreadTextColor" format="reference" />
+        <!--设置未读数背景色-->
+        <attr name="unreadTextBg" format="reference" />
+        <!--设置提示消息字体大小-->
+        <attr name="msgTextSize" format="dimension" />
+        <!--设置提示消息字体颜色-->
+        <attr name="msgTextColor" format="reference" />
+        <!--设置提示消息背景-->
+        <attr name="msgTextBg" format="reference" />
+        <!--设置提示点背景-->
+        <attr name="notifyPointBg" format="reference" />
+        <!--设置未读数组阈值 大于阈值的数字将显示为 n+ n为设置的阈值-->
+        <attr name="unreadThreshold" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="BottomBarLayout">
+        <attr name="smoothScroll" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SlideBar">
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+        <attr name="slideBar_chooseTextColor" format="color"/>
+        <attr name="slideBar_backgroundColor" format="color"/>
+        <attr name="slideBar_chooseBackgroundColor" format="color"/>
+        <attr name="slideBar_style">
+            <enum name="default_" value="0"/>
+            <enum name="none" value="1"/>
+            <enum name="circle" value="2"/>
+            <enum name="stretch" value="3"/>
+        </attr>
+    </declare-styleable>
+
+
+    <style name="common_lin_h_padd10">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:padding">@dimen/common_dimen_10</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="common_lin_h_plr10_tb5">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingRight">@dimen/common_dimen_10</item>
+        <item name="android:paddingLeft">@dimen/common_dimen_10</item>
+        <item name="android:paddingTop">@dimen/common_dimen_5</item>
+        <item name="android:paddingBottom">@dimen/common_dimen_5</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="common_lin_h_plr10_tb8">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingRight">@dimen/common_dimen_10</item>
+        <item name="android:paddingLeft">@dimen/common_dimen_10</item>
+        <item name="android:paddingTop">@dimen/common_dimen_8</item>
+        <item name="android:paddingBottom">@dimen/common_dimen_8</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="common_lin_h_wrap_padding_lr">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingLeft">@dimen/common_dimen_10</item>
+        <item name="android:paddingRight">@dimen/common_dimen_10</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="common_line_h_wrap_content">
+        <item name="android:paddingLeft">@dimen/common_dimen_10</item>
+        <item name="android:paddingRight">@dimen/common_dimen_10</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="common_linearlayout_wrap_content">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="common_line_h_min40">
+        <item name="android:paddingLeft">@dimen/common_dimen_10</item>
+        <item name="android:paddingTop">@dimen/common_dimen_10</item>
+        <item name="android:paddingBottom">@dimen/common_dimen_10</item>
+        <item name="android:paddingRight">@dimen/common_dimen_10</item>
+        <item name="android:minHeight">@dimen/common_dimen_40</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="common_tv_wrap_666">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/common_size_14</item>
+        <item name="android:textColor">@color/color_666</item>
+    </style>
+
+    <style name="common_tv_wrap_333">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/common_size_14</item>
+        <item name="android:textColor">@color/color_333</item>
+        <item name="android:textColorHint">@color/color_999</item>
+    </style>
+    <style name="common_tv_title_w_match_14_333">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/color_333</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="common_et_input_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/common_size_14</item>
+        <item name="android:textColor">@color/color_333</item>
+        <item name="android:textColorHint">@color/color_999</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="common_rtv_submit">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:layout_height">@dimen/common_dimen_45</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/common_dimen_10</item>
+        <item name="android:layout_marginRight">@dimen/common_dimen_10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/common_size_15</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--淘宝嵌套-->
+    <declare-styleable name="ConsecutiveScrollerLayout_Layout">
+        <attr name="layout_isConsecutive" format="boolean" />
+        <attr name="layout_isNestedScroll" format="boolean" />
+        <attr name="layout_isSticky" format="boolean" />
+        <attr name="layout_align" format="enum">
+            <enum name="LEFT" value="1" />
+            <enum name="RIGHT" value="2" />
+            <enum name="CENTER" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ConsecutiveScrollerLayout">
+        <attr name="isPermanent" format="boolean" />
+    </declare-styleable>
+
+
+
+</resources>

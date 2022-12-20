@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/stu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:status="@{null}" />
+        <RelativeLayout
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            
+            <ImageView
+                android:id="@+id/back"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back_3"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#ff333333"
+                android:textSize="18sp"
+                />
+        </RelativeLayout>
+
+        
+        <LinearLayout
+            android:layout_marginTop="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="手机号"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                />
+            <EditText
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:id="@+id/mEtPhone"
+                android:hint="手机号"
+                android:paddingLeft="10dp"
+                android:textColor="#ff999999"
+                android:textColorHint="#999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/line_gray" />
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/line_gray" />
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:id="@+id/codell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="验证码"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/mEtCode"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:background="@null"
+                android:digits="0123456789"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#ff999999"
+                android:textColorHint="#999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/send_code"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="发送验证码"
+                android:textColor="@color/basebg"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/line_gray" />
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="密码    "
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                />
+            <EditText
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:id="@+id/mEtPwd"
+                android:paddingLeft="10dp"
+                android:textColor="#ff999999"
+                android:textColorHint="#999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/line_gray" />
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="确认密码"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                />
+            <EditText
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:hint="请输入确认密码"
+                android:paddingLeft="10dp"
+                android:inputType="textPassword"
+                android:id="@+id/mEtPwdTwo"
+                android:textColor="#ff999999"
+                android:textColorHint="#999999"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/line_gray" />
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/shape_green19"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</layout>

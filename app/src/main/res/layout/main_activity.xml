@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/stu"
+            android:layout_width="match_parent"
+            android:background="@color/transparent"
+            android:visibility="gone"
+            android:layout_height="0dp"
+            app:status="@{null}" />
+
+        <FrameLayout
+            android:id="@+id/fl_home_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.zkwl.qhzwj.ui.bottombarlayout.BottomBarLayout
+            android:id="@+id/bbl_home_tab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.zkwl.qhzwj.ui.bottombarlayout.BottomBarItem
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@mipmap/icon_homeunselect"
+                app:iconSelected="@mipmap/icon_homeselect"
+                app:itemMarginTop="5dp"
+                app:itemText="首页"
+                app:itemTextSize="12sp"
+                app:openTouchBg="true"
+                app:textColorNormal="@color/color_999"
+                app:textColorSelected="@color/basebg"
+                app:touchDrawable="@drawable/bot_selector_bg" />
+            <com.zkwl.qhzwj.ui.bottombarlayout.BottomBarItem
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@mipmap/icon_classroomselect"
+                app:iconSelected="@mipmap/icon_classroomunselect"
+                app:itemMarginTop="5dp"
+                app:itemText="学堂"
+                app:itemTextSize="12sp"
+                app:openTouchBg="true"
+                app:textColorNormal="@color/color_999"
+                app:textColorSelected="@color/basebg"
+                app:touchDrawable="@drawable/bot_selector_bg" />
+            <com.zkwl.qhzwj.ui.bottombarlayout.BottomBarItem
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@mipmap/icon_jiankangunselect"
+                app:iconSelected="@mipmap/icon_jiankangselect"
+                app:itemMarginTop="5dp"
+                app:itemText="健康"
+                app:itemTextSize="12sp"
+                app:openTouchBg="true"
+                app:textColorNormal="@color/color_999"
+                app:textColorSelected="@color/basebg"
+                app:touchDrawable="@drawable/bot_selector_bg" />
+            <com.zkwl.qhzwj.ui.bottombarlayout.BottomBarItem
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@mipmap/icon_meunselect"
+                app:iconSelected="@mipmap/icon_meselect"
+                app:itemMarginTop="5dp"
+                app:itemText="首页"
+                app:itemTextSize="12sp"
+                app:openTouchBg="true"
+                app:textColorNormal="@color/color_999"
+                app:textColorSelected="@color/basebg"
+                app:touchDrawable="@drawable/bot_selector_bg" />
+
+
+        </com.zkwl.qhzwj.ui.bottombarlayout.BottomBarLayout>
+    </LinearLayout>
+</layout>

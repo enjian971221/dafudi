@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.zkwl.qhzwj.ui.consecutivescroller.ConsecutiveScrollerLayout
+                    android:id="@+id/scrollerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.youth.banner.Banner
+                                android:id="@+id/banner_shop_good_info"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_good_info_good_name"
+                                style="@style/common_tv_wrap_333"
+                                android:layout_width="match_parent"
+                                android:paddingBottom="@dimen/common_dimen_5"
+                                android:paddingLeft="@dimen/common_size_10"
+                                android:paddingRight="@dimen/common_size_10"
+                                android:paddingTop="@dimen/common_dimen_5"
+                                android:text="good_name"
+                                android:textSize="@dimen/common_size_16"
+                                android:textStyle="bold" />
+
+                            <LinearLayout style="@style/common_lin_h_padd10">
+
+                                <TextView
+                                    style="@style/common_tv_wrap_666"
+                                    android:text="价格:" />
+
+                                <TextView
+                                    android:id="@+id/tv_shop_good_info_good_member_price"
+                                    style="@style/common_tv_wrap_666"
+                                    android:paddingLeft="@dimen/common_dimen_5"
+                                    android:text="price"
+                                    android:textColor="@color/bbl_ff0000" />
+
+                                <TextView
+                                    style="@style/common_tv_wrap_666"
+                                    android:paddingLeft="@dimen/common_dimen_20"
+                                    android:text="原价:" />
+
+                                <TextView
+                                    android:id="@+id/tv_shop_good_info_good_market_price"
+                                    style="@style/common_tv_wrap_666"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="@dimen/common_dimen_5"
+                                    android:text="price"
+                                    android:textColor="@color/color_999" />
+
+                                <TextView
+                                    android:id="@+id/tv_shop_good_info_goods_inventory"
+                                    style="@style/common_tv_wrap_333"
+                                    android:paddingLeft="@dimen/common_size_10"
+                                    android:text="goods_inventory"
+                                    android:textColor="@color/color_999"
+                                    android:textSize="@dimen/common_size_12" />
+                            </LinearLayout>
+
+                            <include layout="@layout/common_line_no_margin" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_shop_good_info_integral_num"
+                                style="@style/common_lin_h_padd10"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    style="@style/common_tv_wrap_666"
+                                    android:text="积分 : "
+                                    android:textSize="@dimen/common_size_12" />
+
+                                <TextView
+                                    style="@style/common_tv_wrap_666"
+                                    android:text="购买此商品赠送"
+                                    android:textSize="@dimen/common_size_12" />
+
+                                <TextView
+                                    android:id="@+id/tv_shop_good_info_integral_num"
+                                    style="@style/common_tv_wrap_333"
+                                    android:text="integral_num"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <TextView
+                                    style="@style/common_tv_wrap_666"
+                                    android:text="积分" />
+                            </LinearLayout>
+
+                            <include layout="@layout/common_line_no_margin" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_good_info_get_coupon"
+                                style="@style/common_tv_wrap_666"
+                                android:layout_width="match_parent"
+                                android:background="@color/white"
+                                android:drawableLeft="@mipmap/ic_g_get_coupon"
+                                android:drawablePadding="@dimen/common_dimen_5"
+                                android:drawableRight="@mipmap/ic_gray_next"
+                                android:padding="@dimen/common_dimen_10"
+                                android:text=""
+                                android:textSize="@dimen/common_size_12"
+                                android:visibility="gone" />
+
+
+                            <LinearLayout style="@style/common_lin_h_padd10">
+
+                                <TextView
+                                    android:id="@+id/tv_shop_good_info_good_postage"
+                                    style="@style/common_tv_wrap_666"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:text="good_postage"
+                                    android:textSize="@dimen/common_size_12" />
+
+                                <TextView
+                                    android:id="@+id/tv_shop_good_info_unit_name"
+                                    style="@style/common_tv_wrap_666"
+                                    android:text="unit_name"
+                                    android:textSize="@dimen/common_size_12" />
+                            </LinearLayout>
+
+                            <include layout="@layout/common_line_no_margin" />
+
+                            <LinearLayout style="@style/common_lin_h_padd10">
+
+                                <TextView
+                                    android:id="@+id/tv_shop_good_info_goods_brand"
+                                    style="@style/common_tv_wrap_666"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:text="goods_brand"
+                                    android:textSize="@dimen/common_size_12" />
+
+                                <TextView
+                                    android:id="@+id/tv_shop_good_info_fact_sales_volume"
+                                    style="@style/common_tv_wrap_666"
+                                    android:text="fact_sales_volume"
+                                    android:textSize="@dimen/common_size_12" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tablayout_shop_good_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@android:color/white"
+                        app:layout_isSticky="true"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="@color/colorPrimary"
+                        app:tabIndicatorHeight="2dp"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/colorPrimary" />
+
+                    <com.zkwl.qhzwj.ui.consecutivescroller.ConsecutiveViewPager
+                        android:id="@+id/viewpager_shop_good_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </com.zkwl.qhzwj.ui.consecutivescroller.ConsecutiveScrollerLayout>
+
+                <LinearLayout
+                    style="@style/common_lin_h_plr10_tb5"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_shop_good_info_store_info"
+                        style="@style/common_tv_wrap_666"
+                        android:drawablePadding="@dimen/common_dimen_3"
+                        android:drawableTop="@mipmap/ic_shop_store"
+                        android:gravity="center"
+                        android:text="店铺"
+                        android:textSize="@dimen/common_size_10" />
+
+                    <TextView
+                        android:id="@+id/tv_shop_good_info_go_car"
+                        style="@style/common_tv_wrap_666"
+                        android:layout_marginLeft="@dimen/common_dimen_20"
+                        android:drawablePadding="@dimen/common_dimen_3"
+                        android:drawableTop="@mipmap/ic_shop_car"
+                        android:gravity="center"
+                        android:text="购物车"
+                        android:textSize="@dimen/common_size_10" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/rtv_shop_good_info_add_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/common_dimen_5"
+                        android:paddingLeft="@dimen/common_dimen_10"
+                        android:paddingRight="@dimen/common_dimen_10"
+                        android:paddingTop="@dimen/common_dimen_5"
+                        android:text="加入购物车"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_size_12" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+</layout>

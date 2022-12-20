@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/common_lin_h_padd10">
+
+        <ImageView
+            android:id="@+id/simple_good_item_icon"
+            android:layout_width="@dimen/common_dimen_100"
+            android:layout_height="@dimen/common_dimen_70"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            style="@style/common_linearlayout_wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/common_dimen_5">
+
+            <LinearLayout style="@style/common_linearlayout_wrap_content">
+
+                <TextView
+                    android:id="@+id/simple_good_item_good_name"
+                    style="@style/common_tv_wrap_333"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/common_dimen_35"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="good_name" />
+
+                <TextView
+                    android:id="@+id/simple_good_item_sales_volume"
+                    style="@style/common_tv_wrap_333"
+                    android:text="sales_volume"
+                    android:textColor="@color/color_999"
+                    android:textSize="@dimen/common_size_10" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/simple_good_item_unit_name"
+                style="@style/common_tv_wrap_333"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="unit_name"
+                android:textColor="@color/color_999"
+                android:textSize="@dimen/common_size_10" />
+
+            <LinearLayout
+                style="@style/common_linearlayout_wrap_content"
+                android:layout_marginTop="@dimen/common_dimen_5"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/simple_good_item_good_price"
+                    style="@style/common_tv_wrap_333"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="good_price"
+                    android:textColor="@color/bbl_ff0000"
+                    android:textSize="@dimen/common_size_12" />
+
+                <LinearLayout
+                    android:id="@+id/ll_simple_good_item_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/common_tv_wrap_333"
+                        android:text="赠送"
+                        android:textColor="@color/color_999"
+                        android:textSize="@dimen/common_size_10" />
+
+                    <TextView
+                        android:id="@+id/simple_good_item_integral_num"
+                        style="@style/common_tv_wrap_333"
+                        android:text="0"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/common_size_10" />
+
+                    <TextView
+                        style="@style/common_tv_wrap_333"
+                        android:text="积分"
+                        android:textColor="@color/color_999"
+                        android:textSize="@dimen/common_size_10" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/common_line_no_margin" />
+</LinearLayout>

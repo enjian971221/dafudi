@@ -1,0 +1,110 @@
+apply plugin: 'com.android.application'
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    compileSdkVersion build_versions.compileSdk
+    buildToolsVersion build_versions.buildTools
+    defaultConfig {
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        minSdkVersion build_versions.minSdk
+        targetSdkVersion build_versions.targetSdk
+    }
+    sourceSets {
+        main {
+            if (isRelease) {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            /**
+             * 设置debug带正式签名
+             */
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+        warning 'InvalidPackage'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.android_junit
+    androidTestImplementation deps.test.test
+    androidTestImplementation deps.test.espresso
+
+    implementation deps.material
+    implementation deps.appcompat
+    implementation deps.swiperefreshlayout
+    implementation deps.recyclerview
+    implementation deps.constraintlayout
+
+    implementation deps.flowlayout
+
+    implementation deps.logger
+    implementation deps.qmui
+    //leakCanary
+    debugImplementation deps.leakcanary.debug
+
+    implementation deps.jenly.base_util
+    implementation deps.jenly.base_adapter
+
+    //lifecycle
+    annotationProcessor deps.lifecycle.compiler
+    //room - Room Orm
+    annotationProcessor deps.room.compiler
+    //room.rxjava - Room配合RxJava线程调度使用
+    implementation deps.room.rxjava2
+
+    implementation deps.dagger.hilt_android
+    annotationProcessor deps.dagger.hilt_compiler
+
+    if (isRelease) {
+        api project(':app_classroom')
+        api project(':app_healthy')
+    }
+
+    implementation 'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    implementation 'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
+    implementation 'com.github.JuHonggang:ShadowDrawable:0.1'//阴影
+    implementation 'com.github.nangongyibin:Android_HandWrite:1.0.1'//签名画板
+    implementation 'com.qw:soulpermission:1.2.2_x'//权限
+    implementation 'com.github.bumptech.glide:glide:4.11.0'//Glide+高斯模糊
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'//Glide+高斯模糊
+    implementation 'com.youth.banner:banner:1.4.10'//Banner
+    implementation 'com.github.arcadefire:nice-spinner:1.4.4'
+    implementation 'com.king.zxing:zxing-lite:1.1.9-androidx'
+    implementation 'com.github.jenly1314:mvvmframe:2.2.1'
+    implementation 'com.alibaba:fastjson:2.0.19.android'
+
+
+    implementation 'com.aliyun.ams:alicloud-android-push:3.8.0'
+    implementation 'com.aliyun.ams:alicloud-android-third-push:3.8.0'
+    implementation 'com.aliyun.ams:alicloud-android-third-push-vivo:3.8.0'
+    implementation 'com.aliyun.ams:alicloud-android-third-push-oppo:3.8.0'
+    implementation 'com.aliyun.ams:alicloud-android-third-push-huawei:3.8.0'
+    implementation 'com.aliyun.ams:alicloud-android-third-push-xiaomi:3.8.0'
+
+
+}

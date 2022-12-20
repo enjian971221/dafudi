@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        style="@style/common_lin_h_padd10"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="65dp">
+
+            <ImageView
+                android:id="@+id/community_activity_item_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageView
+                android:id="@+id/community_activity_item_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <LinearLayout
+            style="@style/common_linearlayout_wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/common_dimen_10">
+
+            <LinearLayout
+                style="@style/common_linearlayout_wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/common_dimen_5">
+
+                <TextView
+                    android:id="@+id/community_activity_item_title"
+                    style="@style/common_tv_wrap_333"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingRight="@dimen/common_dimen_10"
+                    android:text="title" />
+
+                <TextView
+                    android:id="@+id/community_activity_item_status"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/common_dimen_2"
+                    android:paddingTop="@dimen/common_dimen_2"
+                    android:text="status"
+                    android:textColor="@color/color_bt"
+                    android:textSize="@dimen/common_size_12"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/common_linearlayout_wrap_content"
+                android:layout_marginBottom="@dimen/common_dimen_5">
+
+                <TextView
+                    android:id="@+id/community_activity_item_time"
+                    style="@style/common_tv_wrap_666"
+                    android:layout_weight="1"
+                    android:text="time"
+                    android:textSize="@dimen/common_size_12" />
+
+                <ImageView
+                    android:id="@+id/community_activity_item_highlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

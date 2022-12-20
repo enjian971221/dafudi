@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--YCDialog-->
+    <dimen name="app_normal_margin">10dp</dimen>
+    <dimen name="app_plus_margin">12dp</dimen>
+    <dimen name="app_tiny_margin">4dp</dimen>
+    <dimen name="bottom_dialog_top_icon">38dp</dimen>
+    <dimen name="bottom_dialog_left_icon">32dp</dimen>
+    <!--知乎图片选择-->
+    <dimen name="media_grid_size">48dp</dimen>
+    <dimen name="media_grid_spacing">4dp</dimen>
+    <dimen name="album_item_height">72dp</dimen>
+    <dimen name="grid_expected_size">120dp</dimen>
+    <!--v3-->
+    <dimen name="v3_default_corner_radius">4dp</dimen>
+    <dimen name="v3_default_shadow_radius">4dp</dimen>
+    <!---->
+    <dimen name="common_dimen_1">1dp</dimen>
+    <dimen name="common_dimen_2">2dp</dimen>
+    <dimen name="common_dimen_3">3dp</dimen>
+    <dimen name="common_dimen_5">5dp</dimen>
+    <dimen name="common_dimen_10">10dp</dimen>
+    <dimen name="common_dimen_8">8dp</dimen>
+    <dimen name="common_dimen_15">15dp</dimen>
+    <dimen name="common_dimen_20">20dp</dimen>
+    <dimen name="common_dimen_25">25dp</dimen>
+    <dimen name="common_dimen_30">30dp</dimen>
+    <dimen name="common_dimen_35">35dp</dimen>
+    <dimen name="common_dimen_line">0.5dp</dimen>
+    <dimen name="common_dimen_45">45dp</dimen>
+    <dimen name="common_dimen_40">40dp</dimen>
+    <dimen name="common_dimen_50">50dp</dimen>
+    <dimen name="common_dimen_55">55dp</dimen>
+    <dimen name="common_dimen_60">60dp</dimen>
+    <dimen name="common_dimen_65">65dp</dimen>
+    <dimen name="common_dimen_70">70dp</dimen>
+    <dimen name="common_dimen_80">80dp</dimen>
+    <dimen name="common_dimen_90">90dp</dimen>
+    <dimen name="common_dimen_100">100dp</dimen>
+    <dimen name="common_dimen_110">110dp</dimen>
+    <dimen name="common_dimen_120">120dp</dimen>
+    <dimen name="common_dimen_150">150dp</dimen>
+    <dimen name="common_dimen_200">200dp</dimen>
+    <dimen name="common_dimen_300">300dp</dimen>
+
+    <dimen name="common_size_7">7sp</dimen>
+    <dimen name="common_size_10">10sp</dimen>
+    <dimen name="common_size_11">11sp</dimen>
+    <dimen name="common_size_12">12sp</dimen>
+    <dimen name="common_size_13">13sp</dimen>
+    <dimen name="common_size_14">14sp</dimen>
+    <dimen name="common_size_15">15sp</dimen>
+    <dimen name="common_size_16">16sp</dimen>
+    <dimen name="common_size_17">17sp</dimen>
+    <dimen name="common_size_18">18sp</dimen>
+    <dimen name="common_size_20">20sp</dimen>
+    <dimen name="common_size_25">25sp</dimen>
+
+    <dimen name="cust_dialog_hight_250">250dp</dimen>
+    <dimen name="cust_dialog_hight_200">200dp</dimen>
+    <dimen name="cust_dialog_hight_300">300dp</dimen>
+
+    <dimen name="key_height_land">40dp</dimen>
+    <dimen name="key_height">48dp</dimen>
+
+    <!-- 选项文字大小 -->
+    <dimen name="pickerview_textsize">20sp</dimen>
+
+
+</resources>

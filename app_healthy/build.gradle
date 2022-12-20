@@ -1,0 +1,13 @@
+apply from: '../app.gradle'
+
+android {
+
+    defaultConfig {
+        if (!isRelease) {
+            applicationId "com.zkwl.app_healthy"
+            versionCode app_version.versionCode
+            versionName app_version.versionName
+        }
+    }
+}
+

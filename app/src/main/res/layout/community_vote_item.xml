@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/common_lin_h_padd10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/community_vote_item_lc"
+                android:layout_width="@dimen/common_dimen_90"
+                android:layout_height="65dp"
+                android:layout_marginRight="@dimen/common_dimen_5">
+
+                <ImageView
+                    android:id="@+id/community_vote_item_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/common_dimen_5">
+
+                <TextView
+                    android:id="@+id/community_vote_item_title"
+                    style="@style/common_tv_wrap_333"
+                    android:layout_weight="1"
+                    android:text="title" />
+
+                <LinearLayout
+                    style="@style/common_linearlayout_wrap_content"
+                    android:layout_marginBottom="@dimen/common_dimen_5">
+
+                    <TextView
+                        android:id="@+id/community_vote_item_count"
+                        style="@style/common_tv_wrap_333"
+                        android:text="0"
+                        android:textColor="@color/color_bt" />
+
+                    <TextView
+                        style="@style/common_tv_wrap_666"
+                        android:text="票" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/community_vote_item_submit"
+                style="@style/common_lin_h_plr10_tb5"
+                android:layout_width="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/community_vote_item_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/common_tv_wrap_333"
+                    android:layout_marginLeft="@dimen/common_dimen_3"
+                    android:text="投票"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
